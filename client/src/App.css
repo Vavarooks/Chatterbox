@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#id {
+  background-image: "inside-wooden-box.jpg";
+}

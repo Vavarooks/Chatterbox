@@ -4,6 +4,8 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Comment = () => {
+
+
     const [errors, setErrors] = useState("");
     const navigate = useNavigate();
     
@@ -18,10 +20,11 @@ const Comment = () => {
         const newComment = {
             comment,
         }
-        editOneChatterApi(newComment)
+        commentOneChatterApi(newComment)
     }
 
-    const editOneChatterApi = (comment) => {
+
+    const commentOneChatterApi = (comment) => {
         axios.put(`http://localhost:9001/api/chatter/update/${id}`, comment)
             .then(res => {
                 console.log(res)

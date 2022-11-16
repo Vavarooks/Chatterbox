@@ -37,6 +37,8 @@
   }
 }
 
-#id {
-  background-image: "inside-wooden-box.jpg";
+.bg-img {
+  background-image: url("inside_a_box.jpg");
+  background-repeat: no-repeat;
+  background-size: auto ;
 }

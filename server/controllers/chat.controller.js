@@ -14,7 +14,17 @@ module.exports.findOneChatById = (req,res) =>{
 
 module.exports.createNewChat = (req,res) =>{
     Chat.create(req.body)
-        .then(newChat => res.json(newChat))
+        .then(newChat => {
+            // res.json(newChat),
+            Chat.findOne({_id})
+        })
+        .catch(err => res.status(400).json(err))
+}
+
+module.exports.findChatAndUpdateComment = (req,res) =>{
+    console.log(req.body);
+    Chat.findOneAndUpdateComment({_id: req.params.id}, req.body, {new:true, runValidators:true})
+        .then(updateOneComment => res.json(updateOneComment))
         .catch(err => res.status(400).json(err))
 }
 

@@ -33,6 +33,7 @@ const ViewAll = () => {
 
     return (
         <>
+        <div className='bg-img'>
             <div className='container d-block mx-auto w-50 my-3 p-3' >
                 <Link className="btn btn-secondary" to={'/chatter/add'}>Add New Post</Link>
                 <div className="row row-cols-2">
@@ -66,6 +67,7 @@ const ViewAll = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     )
 }

@@ -36,13 +36,14 @@ const ViewOne = () =>{
 
     return (
         <>
-            <h1>View One</h1>
-            <div className='container card border d-block mx-auto w-85 my-3 p-3'>
-                    <h1>Title: {title}</h1>
-                <div className='container d-block mx-auto w-50 my-3 p-3' >
-                <img src={image || process.env.PUBLIC_URL + '/img-not-found.png'} class="img-fluid mx-auto d-block" alt={image} />
-                <h2>Message: {message}</h2>
-                <h3>Details: {description}</h3>
+            <div className='bg-img'>
+                <div className='container d-block mx-auto w-75 my-3 p-3'>
+                    <div className='container card' >
+                        <h1>Title: {title}</h1>
+                    <img src={image || process.env.PUBLIC_URL + '/img-not-found.png'} class="img-fluid mx-auto d-block" alt={image} />
+                    <h2>Message: {message}</h2>
+                    <h3>Details: {description}</h3>
+                    </div>
                 </div>
             </div>
         </>

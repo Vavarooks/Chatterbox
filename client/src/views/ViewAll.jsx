@@ -53,14 +53,19 @@ const ViewAll = () => {
                                                     {loaded && comment.map((comment, key) =>
                                                         <div key={key}>
                                                             <li>
-                                                                <p className="dropdown-item">{comment}</p>
-                                                                {/* <button className='btn btn-warning'>Edit</button>
-                                                            <button className='btn btn-danger'>Delete</button> */}
-                                                                <hr />
+                                                                <p className="dropdown-item">
+                                                                    <div class="alert alert-info" role="alert">
+                                                                        {comment}
+                                                                    </div>
+                                                                </p>
+                                                                
                                                             </li>
                                                         </div>
                                                     )}
-                                                    <Link className="btn btn-secondary" to={`/chatter/update/${comment.id}`}>Make a Comment</Link>
+                                                    <div className="text-center">
+
+                                                        <Link className="btn btn-secondary" to={`/chatter/update/${comment.id}`}>Make a Comment</Link>
+                                                    </div>
                                                 </ul>
                                             </div>
                                         </div>
